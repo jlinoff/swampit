@@ -12,6 +12,13 @@ The timestamp key/value pair contains the time that the packet was sent.
 
 Here is a very simple example of how to use it.
 
+### First compile it for your system.
+
+```bash
+$ go build swampit.go
+$ ./swampit -h
+```
+
 ### Example - In one window start a listener.
 You need to start this first to avoid warnings.
 ```bash
