@@ -26,7 +26,7 @@ $ timeout 30 nc -l -u -4 localhost:9898
 ### Example - In another window start sending stuff.
 ```bash
 $ make
-$ ./swampit -p udp -c 10 -i 2 -s 32 -v localhost:9898
+$ ./swampit -p udp -c 10 -i 2 -s 8 -v localhost:9898
 2016-07-02 00:33:49.844 +0000 UTC  swampit   88 INFO - {"id": "1", "data": "g4iy8313", "timestamp": "2016-07-02 00:33:49.844 +0000 UTC"}
 2016-07-02 00:33:51.849 +0000 UTC  swampit   88 INFO - {"id": "2", "data": "rf47nmvu", "timestamp": "2016-07-02 00:33:51.848 +0000 UTC"}
 2016-07-02 00:33:53.85 +0000 UTC   swampit   88 INFO - {"id": "3", "data": "jgl61cyy", "timestamp": "2016-07-02 00:33:53.85 +0000 UTC"}
