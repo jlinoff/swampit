@@ -390,11 +390,12 @@ func Err(f string, a ...interface{}) {
 func Base(fp *os.File, p string, s string, level int, sf bool) {
 	pc, fname, lineno, _ := runtime.Caller(level)
 	fname = fname[0 : len(fname)-3]
-	t := time.Now().UTC().Truncate(time.Millisecond).String()
+	//t := time.Now().UTC().Truncate(time.Millisecond).String()
+	t := time.Now().UTC().Truncate(time.Millisecond).Format("2006-01-02 15:05:05.000 MST")
 	if sf { // show function name
 		fct := runtime.FuncForPC(pc).Name()
-		fmt.Fprintf(fp, "%-34s %s %s %d %s - %s\n", t, path.Base(fname), fct, lineno, p, s)
+		fmt.Fprintf(fp, "%-28s %s %s %d %s - %s\n", t, path.Base(fname), fct, lineno, p, s)
 	} else {
-		fmt.Fprintf(fp, "%-34v %v %4d %s - %s\n", t, path.Base(fname), lineno, p, s)
+		fmt.Fprintf(fp, "%-28v %v %4d %s - %s\n", t, path.Base(fname), lineno, p, s)
 	}
 }
